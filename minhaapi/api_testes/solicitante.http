@@ -1,0 +1,15 @@
+# Obter a lista de Solicitante
+GET http://localhost:3000/api/solicitante
+Content-Type: application/json
+###
+
+# Inserir novo Solicitante
+POST http://localhost:3000/api/solicitante
+Content-Type: application/json
+
+{
+ "nome": "Carlos", 
+ "email": "180000@upf.br",
+ "senha": "1234567"
+}
+###

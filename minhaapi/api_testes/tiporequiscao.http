@@ -1,0 +1,18 @@
+# Obter a lista de TipoRequisicao
+GET http://localhost:3000/api/tiporequisicao
+Content-Type: application/json
+###
+
+# Inserir novo TipoRequisicao
+POST http://localhost:3000/api/tiporequisicao
+Content-Type: application/json
+
+{
+ "descricao": "Suporte Técnico"
+}
+###
+
+# Excluir um TipoRequisicao
+DELETE http://localhost:3000/api/tiporequisicao/623e61a7b7b9922dc94d834b
+Content-Type: application/json
+###

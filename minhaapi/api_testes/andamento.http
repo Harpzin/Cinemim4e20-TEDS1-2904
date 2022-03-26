@@ -1,0 +1,4 @@
+# Obter a lista de Colaborador
+GET http://localhost:3000/api/andamento
+Content-Type: application/json
+###

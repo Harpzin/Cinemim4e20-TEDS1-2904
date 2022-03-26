@@ -1,0 +1,20 @@
+# Obter a lista de Requisicao
+GET http://localhost:3000/api/requisicao
+Content-Type: application/json
+###
+
+# Inserir novo requisicao
+POST http://localhost:3000/api/requisicao
+Content-Type: application/json
+
+{
+ "titulo": "Projeto um",
+ "descricao": "teste",
+ "dataHoraCriada": "2020-01-25T17:32:25.000Z",
+ "dataTermino": "2020-11-25T17:32:25.000Z",
+ "status": "ESPERANDO",
+ "prazoAtendimento": "2020-11-25T17:32:25.000Z",
+ "tipoRequisicao": "623e62b5b7b9922dc94d834e",
+ "solicitante": "623e5e4fecfd248af0e960f8"
+}
+###

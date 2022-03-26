@@ -1,0 +1,43 @@
+# Obter a lista de colaborador
+GET http://localhost:3000/colaborador
+Content-Type: application/json
+###
+
+# Inserir novo colaborador
+POST http://localhost:3000/colaborador
+Content-Type: application/json
+
+{
+ "nome": "Carlos Eduardo",
+ "email": "183000@upf",
+ "senha": "12345"
+}
+
+###
+
+# Alterar um colaborador
+PUT http://localhost:3000/colaborador
+Content-Type: application/json
+
+{
+ "_id": "622be505394b34dd04950ab0",
+ "nome": "Bruno Casagrande",
+ "email": "183000@upf.br",
+ "senha": "Gerente",
+}
+###
+
+# Excluir um colaborador pelo id
+DELETE http://localhost:3000/colaborador/622be7779bf0b315b7652477
+Content-Type: application/json
+###
+
+# Obter colaborador pelo id
+GET http://localhost:3000/colaborador/622be4ff394b34dd04950aae
+Content-Type: application/json
+###
+
+# Obter colaborador filtrando
+GET http://localhost:3000/colaborador/filtro/João
+Content-Type: application/json
+###

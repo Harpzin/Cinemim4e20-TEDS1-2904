@@ -1,0 +1,21 @@
+# Obter a lista de Atividade
+GET http://localhost:3000/api/atividade
+Content-Type: application/json
+###
+
+# Inserir novo Atividade
+POST http://localhost:3000/api/atividade
+Content-Type: application/json
+
+{
+ "titulo": "Projeto um",
+ "descricao": "teste",
+ "status": "2020-01-25T17:32:25.000Z",
+ "prazo": "2020-11-25T17:32:25.000Z",
+ "agendaInicio": "Fulano",
+ "dataHoraTermino": "2020-01-25T17:32:25.000Z",
+ "requisicao": "",
+ "responsavel": "623e493be8fb5c144f44ae66"
+
+}
+###
