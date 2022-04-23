@@ -19,28 +19,46 @@ function Usuarios() {
     ];
     setUsuarios(usuariosList);
   }
+
   // operação inserir
   const initialState = { id: null, nome: '', email: '', celular: '' }
   const [usuario, setUsuario] = useState(initialState)
   const [editando, setEditando] = useState(false)
+  
   const inserir = () => {
     setUsuario(initialState);
     setEditando(true);
   }
+
   const salvar = () => {
-    console.log('Salvar ...');
+    if (usuario.id == null) { // inclussão
+      usuario.id = usuarios.length + 1
+      setUsuarios([...usuarios, usuario])
+    } else { // alteração
+      setUsuarios(usuarios.map((find) => (find.id === usuario.id ? usuario : find)))
+    }
     setEditando(false);
   }
+  
   const cancelar = () => {
     console.log('Cancelou ...');
     setEditando(false);
   }
 
+  const editar = (id) => {
+    setUsuario(usuarios.filter((usuario) => usuario.id == id)[0]);
+    setEditando(true);
+  }
+  const excluir = (id) => {
+    setUsuarios(usuarios.filter((usuario) => usuario.id !== id));
+  }
+
+
   if (!editando) {
     return (
       <div className="App">
         <UsuariosList usuarios={usuarios} onClickAtualizar={onClickAtualizar}
-          inserir={inserir} />
+          inserir={inserir} editar={editar} excluir={excluir} />
       </div>
     );
   } else {
